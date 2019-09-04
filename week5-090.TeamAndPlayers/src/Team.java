@@ -51,8 +51,7 @@ public class Team
     }
 
     public void setMaxSize(int maxSize)
-    {
-        
+    { 
         this.size = maxSize; 
     }
     
