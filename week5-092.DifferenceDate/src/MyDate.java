@@ -29,5 +29,14 @@ public class MyDate {
 
         return false;
     }
-
+    
+    public int differenceInYears(MyDate comparedDate)
+    {
+        int dayDif = this.day - comparedDate.day;
+        int monthDif = (this.month - comparedDate.month) * 30;
+        int yearDif = (this.year - comparedDate.year) * 360; 
+        
+        int totalDays = dayDif + monthDif + yearDif; 
+        return Math.abs(totalDays/360);   
+    }
 }
