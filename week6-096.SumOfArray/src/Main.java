@@ -7,8 +7,14 @@ public class Main {
         System.out.println(sum(array));
     }
 
-    public static int sum(int[] array) {
-        // Write code here
-        return 0;
+    public static int sum(int[] array) 
+    {
+        int sum = 0; 
+        for(int i = 0; i < array.length; i++)
+        {
+            sum += array[i]; 
+        }
+        
+        return sum; 
     }
 }

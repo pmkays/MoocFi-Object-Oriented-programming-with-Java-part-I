@@ -7,7 +7,20 @@ public class Main {
         printElegantly(array);
     }
 
-    public static void printElegantly(int[] array) {
-        // Write code here
+    public static void printElegantly(int[] array) 
+    {
+        String print = "";
+        for(int i = 0; i<array.length; i++)
+        {
+            if(i == array.length-1)
+            {
+               print+= array[i]; 
+            }
+            else
+            {
+                print+= array[i] + ", ";
+            }
+        }
+        System.out.println(print);
     }
 }

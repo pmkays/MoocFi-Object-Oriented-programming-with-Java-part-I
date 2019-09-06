@@ -63,8 +63,7 @@ public class Money {
         if(this.less(decremented))
         {
              minusEuros = 0;  
-             minusCents = 0;
-             
+             minusCents = 0;  
         }
         else
         {
