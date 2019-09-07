@@ -14,7 +14,7 @@ public class Main {
         {
             if(i == array.length-1)
             {
-               print+= array[i]; 
+                print+= array[i]; 
             }
             else
             {
