@@ -9,14 +9,45 @@ public class GuessingGame {
         this.reader = new Scanner(System.in);
     }
 
-    public void play(int lowerLimit, int upperLimit) {
+    public void play(int lowerLimit, int upperLimit) 
+    {
         instructions(lowerLimit, upperLimit);
 
-        // write the guessing logic here
-
+        while(true)
+        {
+            if (upperLimit == lowerLimit)
+            {
+                break;
+            }
+            int average = average(lowerLimit, upperLimit); 
+            if(isGreaterThan(average))
+            {
+                lowerLimit = average + 1;
+            }
+            else
+            {
+                upperLimit = average; 
+            }
+        }  
+        System.out.println("The number you're thinking of is " + lowerLimit + ".");
     }
 
-    // implement here the methods isGreaterThan and average
+    public boolean isGreaterThan(int value)
+    {
+        System.out.println(String.format("Is your number greater than %d? (y/n)", value));
+        String answer = reader.nextLine(); 
+        
+        if(answer.equals("y"))
+        {
+            return true;
+        }
+        return false; 
+    }
+    
+    public int average(int firstNumber, int secondNumber)
+    {
+        return (firstNumber + secondNumber)/2;
+    }
 
     public void instructions(int lowerLimit, int upperLimit) {
         int maxQuestions = howManyTimesHalvable(upperLimit - lowerLimit);
